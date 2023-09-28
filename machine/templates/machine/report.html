@@ -1,0 +1,15 @@
+{% extends "machine/_base.html" %}
+{% block title %}
+  Machines Details
+{% endblock title %}
+{% block content %}
+  <h1>{{ report.machine }}</h1>
+  <p>{{ report.measurement_point }}</p>
+  <p>{{ report.value_x }}</p>
+  <p>{{ report.value_y }}</p>
+  <p>{{ report.value_z }}</p>
+  <p>{{ report.value_y }}</p>
+  <p>{{ report.standard }}</p>
+  <p>{{ report.severities }}</p>
+  
+{% endblock content %}

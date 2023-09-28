@@ -1,0 +1,18 @@
+{% extends "machine/_base.html" %}
+{% block title %}
+  Home
+{% endblock title %}
+{% block content %}
+  <h1>Machines</h1>
+  <!-- List of blogs -->
+  <ol>
+      {% for report in reports %}
+        <li>
+          <a href="{% url 'report' report.pk %}">{{ machine.name }}</a>
+        </li>
+      {% empty %}
+        <i>No machines yet</i>
+      {% endfor %}
+  </ol>
+  <a href="{% url 'report_create' %}" class="btn btn-outline-primary">Create New Report</a>
+{% endblock content %}
